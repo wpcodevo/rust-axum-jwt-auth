@@ -15,6 +15,8 @@ start-server:
 
 install:
 	cargo add axum
+	cargo add axum-extra -F cookie
+	cargo add time
 	cargo add tokio -F full
 	cargo add tower-http -F "cors"
 	cargo add serde_json
@@ -26,7 +28,6 @@ install:
 	cargo add jsonwebtoken
 	cargo add argon2
 	cargo add rand_core --features "std"
-	cargo add cookie
 	# HotReload
 	cargo install cargo-watch
 	# SQLX-CLI
